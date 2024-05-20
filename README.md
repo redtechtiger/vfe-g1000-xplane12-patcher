@@ -1,7 +1,5 @@
-# Tauri + Svelte + Typescript
+# VFE G1000 XPlane 12 Patcher
+> Important! This DOES NOT WORK because it attempts to patch the wrong parameter. It is only uploaded for potential code reuse.
 
-This template should help get you started developing with Tauri, Svelte and TypeScript in Vite.
+A simple program that replaces the main binary of the VFE G1000 driver with a patched one.
 
-## Recommended IDE Setup
-
-[VS Code](https://code.visualstudio.com/) + [Svelte](https://marketplace.visualstudio.com/items?itemName=svelte.svelte-vscode) + [Tauri](https://marketplace.visualstudio.com/items?itemName=tauri-apps.tauri-vscode) + [rust-analyzer](https://marketplace.visualstudio.com/items?itemName=rust-lang.rust-analyzer).
