@@ -5,9 +5,9 @@ use std::{io,path::Path};
 use serde::Serialize;
 
 const STOCK_FILE_HASH: &str = "1f8ea45dbf2474a27146e195b691479d2d1a3b6716039b962fe95c4bf5d00f11";
-const PATCH_FILE_HASH: &str = "c2efbf9acd213de7e488942e05da89d7fd3300f841ad352709251d9193c241c3";
+const PATCH_FILE_HASH: &str = "4afe2cd3042fc0bb35039aa5bc691532aff31c58a43f0a3e5b4926b799250775";
 const FILE_NAME: &str = "VFE.G1000.XPControl.exe";
-const PATCH_FILE_BYTES: &[u8] = include_bytes!("VFE.G1000.XPControl - Patched.exe");
+const PATCH_FILE_BYTES: &[u8] = include_bytes!("VFE.G1000.XPControl-Patch2.exe");
 
 #[derive(Serialize)]
 enum PatchResult {
@@ -39,13 +39,16 @@ fn patch(path: &str) -> PatchResult {
     let executable = std::fs::read(path.join(FILE_NAME)).unwrap();
     let hash = sha256::digest(executable);
 
+
+    dbg!(hash.as_str());
+
     // Check if the patch is already applied
     match hash.as_str() {
         STOCK_FILE_HASH => (), // Keep going
         PATCH_FILE_HASH => return PatchResult::NoChange,
         _ => return PatchResult::InvalidVersion,
     }
-    
+
     // Create backup dir and copy current file
     match std::fs::create_dir_all(path.join("clean")) {
         Ok(_) => (),

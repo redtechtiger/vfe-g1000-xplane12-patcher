@@ -1,5 +1,5 @@
 # VFE G1000 XPlane 12 Patcher
-> ⚠️ Important! This **does not work** because it attempts to patch the wrong parameter. It is only uploaded for potential code reuse.
+> ✅ The latest release of this program successfully patches the driver for the newer extplane protocol.
 
 A simple program that replaces the main binary of the VFE G1000 driver with a patched one.
 

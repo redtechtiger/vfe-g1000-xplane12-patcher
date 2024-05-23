@@ -1,7 +1,7 @@
 [package]
 name = "vfe-g1000-xplane12-patcher"
 version = "0.0.0"
-description = "A Tauri App"
+description = "An XPlane 12 patcher for the VFE-G1000 drivers."
 authors = ["you"]
 edition = "2021"
 

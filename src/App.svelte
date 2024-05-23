@@ -107,10 +107,16 @@
 </script>
 
 <main class="container">
+  <div class="bottom-left">
+    <p>© RedTechTiger 2024. No warranty provided.</p>
+  </div>
+  <div class="bottom-right">
+    <p>v1.1</p>
+  </div>
   <div class="top-section">
     <h1>XPlane 12 Patcher</h1>
     <p>
-      This is a fully automated tool for patching the VFE G1000 XPlane control software for use with XPlane 12. Please drag and drop the installation folder into the box below. While this patch and utility have been tested, no warranty or guarantees are provided.
+      This is a fully automated tool for patching the VFE G1000 XPlane control software for use with XPlane 12, that patches the main binary of the driver with an updated plugin TCP protocol handler. Please drag and drop the installation folder into the box below.
     </p>
   </div>
   <div class="middle-section">
@@ -241,6 +247,26 @@
   .middle-section {
     text-align: center;
     margin-top: 50px;
+  }
+
+  .bottom-left {
+    position: fixed;
+    left: 10px;
+    bottom: -10px;
+  }
+
+  .bottom-left p {
+    font-size: 14px;
+  }
+
+  .bottom-right {
+    position: fixed;
+    right: 10px;
+    bottom: -10px;
+  }
+
+  .bottom-right p {
+    font-size: 14px;
   }
 
   .spinner {
