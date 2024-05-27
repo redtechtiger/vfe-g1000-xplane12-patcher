@@ -1,8 +1,8 @@
 // Prevents additional console window on Windows in release, DO NOT REMOVE!!
 #![cfg_attr(not(debug_assertions), windows_subsystem = "windows")]
 
-use std::{io,path::Path};
 use serde::Serialize;
+use std::{io, path::Path};
 
 const STOCK_FILE_HASH: &str = "1f8ea45dbf2474a27146e195b691479d2d1a3b6716039b962fe95c4bf5d00f11";
 const PATCH_FILE_HASH: &str = "4afe2cd3042fc0bb35039aa5bc691532aff31c58a43f0a3e5b4926b799250775";
@@ -61,8 +61,6 @@ fn patch(path: &str) -> PatchResult {
         Ok(_) => return PatchResult::Success,
         Err(_) => return PatchResult::Failed,
     };
-
-
 }
 
 #[tauri::command]
