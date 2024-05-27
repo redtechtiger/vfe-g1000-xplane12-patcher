@@ -39,9 +39,6 @@ fn patch(path: &str) -> PatchResult {
     let executable = std::fs::read(path.join(FILE_NAME)).unwrap();
     let hash = sha256::digest(executable);
 
-
-    dbg!(hash.as_str());
-
     // Check if the patch is already applied
     match hash.as_str() {
         STOCK_FILE_HASH => (), // Keep going
